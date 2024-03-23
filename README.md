@@ -4,6 +4,7 @@
 
 
 ### AIM:
+To implement the Holt Winters Method Model using Python.
 
 ### ALGORITHM:
 1. You import the necessary libraries
@@ -18,6 +19,46 @@ datetime, and perform some initial data exploration
 Winters model to the entire dataset and make future predictions
 9. You plot the original sales data and the predictions
 ### PROGRAM:
+#### Import the libraries
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.tsa.holtwinters import ExponentialSmoothing
+```
+#### Load the dataset
+```
+data=pd.read_csv("/content/AirPassengers.csv")
+data
+```
+#### Convert the string format to Date format
+```
+data['Month'] = pd.to_datetime(data['Month'])
+data.set_index('Month', inplace=True)
+```
+#### Perform Holt-Winters exponential smoothing
+```
+model = ExponentialSmoothing(data, trend="add", seasonal="add", seasonal_periods=12)
+fit = model.fit()
+```
+#### Forecast for the next n steps
+```
+n_steps = 12  
+
+forecast = fit.forecast(steps=n_steps)
+forecast
+```
+#### Plot the original data and the forecast
+```
+plt.figure(figsize=(10, 6))
+plt.plot(data.index, data, label='Original Data')
+plt.plot(pd.date_range(start=data.index[-1], periods=n_steps+1, freq='M')[1:], forecast, label='Forecast')
+plt.xlabel('Date')
+plt.ylabel('Value')
+plt.title('Holt-Winters Forecast')
+plt.legend()
+plt.show()
+```
 
 ### OUTPUT:
 
