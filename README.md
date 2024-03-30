@@ -61,6 +61,7 @@ plt.show()
 ```
 
 ### OUTPUT:
+![image](https://github.com/manojvenaram/TSA_EXP6/assets/94165064/c69e9ef6-a1f1-4524-8df4-e844129c2140)
 
 
 TEST_PREDICTION
