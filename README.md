@@ -1,5 +1,5 @@
 # Ex.No: 6               HOLT WINTERS METHOD
-### Date: 
+### Date: 30-03-2024
 
 
 
@@ -8,7 +8,7 @@ To implement the Holt Winters Method Model using Python.
 
 ### ALGORITHM:
 1. You import the necessary libraries
-2. You load a CSV file containing daily sales data into a DataFrame, parse the 'date' column as
+2. You load a CSV file containing daily airpassengers data into a DataFrame, parse the 'date' column as
 datetime, and perform some initial data exploration
 3. You group the data by date and resample it to a monthly frequency (beginning of the month
 4. You plot the time series data
@@ -17,7 +17,7 @@ datetime, and perform some initial data exploration
 7. You calculate the root mean squared error (RMSE) to evaluate the model's performance
 8. You calculate the mean and standard deviation of the entire sales dataset, then fit a Holt-
 Winters model to the entire dataset and make future predictions
-9. You plot the original sales data and the predictions
+9. You plot the original passengers data and the predictions
 ### PROGRAM:
 #### Import the libraries
 ```python
@@ -62,13 +62,6 @@ plt.show()
 
 ### OUTPUT:
 ![image](https://github.com/manojvenaram/TSA_EXP6/assets/94165064/c69e9ef6-a1f1-4524-8df4-e844129c2140)
-
-
-TEST_PREDICTION
-
-
-
-FINAL_PREDICTION
 
 ### RESULT:
 Thus the program run successfully based on the Holt Winters Method model.
